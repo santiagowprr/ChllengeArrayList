@@ -64,6 +64,7 @@ public class Main {
         Contact existingContactRecord = mobilePhone.queryContact(name);
         if (existingContactRecord == null) {
             System.out.println("Contact not found");
+            return;
         }
 
         System.out.println("Enter new contact name: ");
@@ -86,6 +87,7 @@ public class Main {
         Contact existingContactRecord = mobilePhone.queryContact(name);
         if (existingContactRecord == null) {
             System.out.println("Contact not found");
+            return;
         }
 
         if (mobilePhone.removeContact(existingContactRecord)){
@@ -101,6 +103,7 @@ public class Main {
         Contact existingContactRecord = mobilePhone.queryContact(name);
         if (existingContactRecord == null) {
             System.out.println("Contact not found");
+            return;
         }
 
         System.out.println("Name: " + existingContactRecord.getName() + ", phone nr: " + existingContactRecord.getPhoneNumber());
@@ -114,9 +117,9 @@ public class Main {
         System.out.println("\nAvailable actions:\npress");
         System.out.println("0 - to shut down\n" +
                 "1 - to print contacts\n" +
-                "2 - to add a new contact" +
-                "4 - to update an existing contact\n" +
-                "3 - to remove an existing contact\n" +
+                "2 - to add a new contact\n" +
+                "3 - to update an existing contact\n" +
+                "4 - to remove an existing contact\n" +
                 "5 - query if an existing contact exists\n" +
                 "6 - to print a list of available actions");
         System.out.println("Choose your action: ");
